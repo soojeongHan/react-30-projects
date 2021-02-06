@@ -21,9 +21,9 @@ const App = () => {
   };
 
   return (
-    <React.Fragment>
+    <div className="body">
       <header>
-        <h1>Javascript-30-Projects</h1>
+        <h1>React-30-Projects</h1>
         <div className="project-list">
           {new Array(30).fill(0).map((_, i) => (
             <button key={i} onClick={(e) => onClick(e)} value={i + 1}>
@@ -33,7 +33,7 @@ const App = () => {
         </div>
       </header>
       <main>{Index && <Index />}</main>
-    </React.Fragment>
+    </div>
   );
 };
 
