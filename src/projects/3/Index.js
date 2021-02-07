@@ -9,12 +9,12 @@ const Index = () => {
     color: "#ffc600",
   });
 
-  const handleChanging = (e) => {
+  const handleChanging = React.useCallback((e) => {
     setValue((preValue) => ({
       ...preValue,
       [e.target.name]: e.target.value,
     }));
-  };
+  }, []);
 
   return (
     <div className="css-variables">

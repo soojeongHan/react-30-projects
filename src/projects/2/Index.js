@@ -24,14 +24,14 @@ const Index = () => {
     second: 0,
   });
   // state로 시,분,초의 방향의 값을 계산하여, 상태를 저장한다.
-  const setDate = () => {
+  const setDate = React.useCallback(() => {
     const now = new Date();
     setTime({
       hour: (now.getHours() / 12) * 360 + 90,
       minute: (now.getMinutes() / 60) * 360 + 90,
       second: (now.getSeconds() / 60) * 360 + 90,
     });
-  };
+  }, []);
 
   return (
     <div className="clockWrapper">

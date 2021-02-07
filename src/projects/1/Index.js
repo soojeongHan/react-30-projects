@@ -11,12 +11,12 @@ const Index = () => {
   const [key, setKey] = React.useState("");
 
   // transition이 끝나면, playing 클래스를 제거한다.
-  const removeTranstion = (e) => {
+  const removeTranstion = React.useCallback((e) => {
     if (e.propertyName !== "transform") return;
     setKey("");
-  };
+  }, []);
 
-  const onKeyDown = (e) => {
+  const onKeyDown = React.useCallback((e) => {
     // drum 클래스의 keys 클래스의 key 값들을 배열로 만들어, e.keyCode값과 dataset의 값이 일치하는 값을 찾아낸다.
     const key = Array.from(divRef.current.firstChild.childNodes).find((v) => {
       return v.dataset.key === String(e.keyCode);
@@ -34,11 +34,14 @@ const Index = () => {
     // audio를 재생하고, playing 클래스를 추가하여, transition 효과를 낸다.
     audio.play();
     setKey(key.dataset.key);
-  };
+  }, []);
   // data_key와 key가 같으면 playing class를 추가한다.
-  const isKey = (data_key) => {
-    return key === data_key ? "playing" : "";
-  };
+  const isKey = React.useCallback(
+    (data_key) => {
+      return key === data_key ? "playing" : "";
+    },
+    [key]
+  );
 
   return (
     <div

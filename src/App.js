@@ -30,6 +30,11 @@ const App = () => {
               {i + 1}
             </button>
           ))}
+          <div>
+            <button onClick={(e) => onClick(e)} value="5-1">
+              5-1
+            </button>
+          </div>
         </div>
       </header>
       <main>{Index && <Index />}</main>
