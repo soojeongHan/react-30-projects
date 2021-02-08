@@ -19,7 +19,6 @@ const App = () => {
       }
     );
   };
-
   return (
     <div className="body">
       <header>
