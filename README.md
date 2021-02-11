@@ -13,3 +13,4 @@
 4. Array Cardio Day 1
 5. Flex Panel Gallery
 6. Type Ahead
+7. Array Cardio Day 2

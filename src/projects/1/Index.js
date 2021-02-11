@@ -38,7 +38,7 @@ const Index = () => {
   // data_key와 key가 같으면 playing class를 추가한다.
   const isKey = React.useCallback(
     (data_key) => {
-      return key === data_key ? "playing" : "";
+      return key === data_key && "playing";
     },
     [key]
   );

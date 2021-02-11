@@ -1,6 +1,6 @@
 import React from "react";
 
-const List = ({ cities }) => {
+const List = ({ cities, setCities }) => {
   const [value, setValue] = React.useState([]);
   const onChange = (e) => {
     const regex = new RegExp(e.target.value, "gi");

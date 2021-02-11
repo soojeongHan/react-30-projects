@@ -40,7 +40,6 @@ const Index = () => {
     ["Life", "In", "Motion"],
   ];
 
-  console.count("rendering");
   return (
     <div className="panels">
       {contents.map((pContent, panelIndex) => {
